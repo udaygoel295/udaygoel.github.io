@@ -1,103 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon</title>
-  <style>
-    body {
-      background-color: #f3f3f3;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    .container {
-      text-align: center;
-    }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-    h1 {
-      color: #333;
-    }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
 
-    .countdown {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-    }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-    .countdown-item {
-      margin: 0 10px;
-    }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-    .countdown-value {
-      display: block;
-      font-size: 36px;
-      font-weight: bold;
-      color: #333;
-    }
+        main {
+            padding: 20px;
+        }
 
-    .countdown-label {
-      display: block;
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
-  <script>
-    // Set the launch date (modify this to your own date)
-    const launchDate = new Date('2023-08-01T00:00:00Z').getTime();
-
-    // Update the countdown every second
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      // Calculations for days, hours, minutes, and seconds
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Display the countdown values
-      document.getElementById('days').textContent = days;
-      document.getElementById('hours').textContent = hours;
-      document.getElementById('minutes').textContent = minutes;
-      document.getElementById('seconds').textContent = seconds;
-
-      // If the countdown is finished, display a message
-      if (distance < 0) {
-        clearInterval(countdown);
-        document.getElementById('countdown').innerHTML = '<p>Website is live!</p>';
-      }
-    }, 1000);
-  </script>
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Coming Soon</h1>
-    <div id="countdown" class="countdown">
-      <div class="countdown-item">
-        <span id="days" class="countdown-value"></span>
-        <span class="countdown-label">Days</span>
-      </div>
-      <div class="countdown-item">
-        <span id="hours" class="countdown-value"></span>
-        <span class="countdown-label">Hours</span>
-      </div>
-      <div class="countdown-item">
-        <span id="minutes" class="countdown-value"></span>
-        <span class="countdown-label">Minutes</span>
-      </div>
-      <div class="countdown-item">
-        <span id="seconds" class="countdown-value"></span>
-        <span class="countdown-label">Seconds</span>
-      </div>
-    </div>
-  </div>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Personal Website</h2>
+            <p>This is where you can introduce yourself or highlight something important.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Describe yourself, your skills, experiences, and interests here.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Showcase your projects, works, or achievements.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Provide contact information or a contact form for visitors to reach you.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
